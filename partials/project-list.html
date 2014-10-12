@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-primary">
+        <div class="panel-heading text-center">List of projects for <strong>abc company Pvt Ltd</strong></div>
+        <div class="panel-body">
+			<select ng-model="project_list" class="form-control" id="project_list" ng-options="project.name for project in project_listing track by project.project_id"  ng-change="getProjectDetails(project_list.project_id)" required>
+            	<option value="" ng-hide="project_list">Select Project For Full Details</option>
+            </select>
+            <br>
+            <div class="row">
+            	<div class="col-md-12">
+            		<h2>{{project_details.name}}</h2><br>
+            		<label>Project Id: </label>{{project_details.project_id}}<br>
+            		<label>Project Manager Id: </label>{{project_details.project_manager_id}}<br>
+            		<label>Client Id: </label>{{project_details.client_id}}<br>
+            		<label>Billing Method: </label>{{project_details.bill_method}}<br>
+            	</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-primary">
+        <div class="panel-heading text-center">Delete Project for <strong>abc company Pvt Ltd</strong></div>
+        <div class="panel-body">
+			<select ng-model="project_list" class="form-control" id="project_list" ng-options="project.name for project in project_listing track by project.project_id"  ng-change="deleteProject(project_list.project_id)">
+            	<option value="" ng-hide="project_list">Select a Project to Delete</option>
+            </select>
+            <br>
+        </div>
+    </div>
+</div>

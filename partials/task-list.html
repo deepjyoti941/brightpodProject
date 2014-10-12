@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-primary">
+        <div class="panel-heading text-center">List Of Tasks</strong></div>
+        <div class="panel-body">
+			<select ng-model="task_list" class="form-control" id="task_list" ng-options="task.name for task in task_listing track by task.task_id"  ng-change="getTaskDetails(task_list.task_id)" required>
+            	<option value="" ng-hide="task_list">Select a Task For Full Details</option>
+            </select>
+            <br>
+            <div class="row">
+            	<div class="col-md-12">
+            		<h2>{{task_details.name}}</h2><br>
+            		<label>Task Id: </label>{{task_details.task_id}}<br>
+            		<label>Rate: </label>{{task_details.rate}}<br>
+            		<label>Updated Time: </label>{{task_details.updated}}<br>
+                    <label>Description: </label>{{task_details.description}}<br>
+
+            	</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-primary">
+        <div class="panel-heading text-center">List Of Time Entries</strong></div>
+        <div class="panel-body">
+			<select ng-model="time_list" class="form-control" id="task_list" ng-options="time.notes for time in time_listing track by time.time_entry_id"  ng-change="getTimeEntryDetails(time_list.time_entry_id)" required>
+            	<option value="" ng-hide="task_list">Select a Time For Full Details</option>
+            </select>
+            <br>
+            <div class="row">
+            	<div class="col-md-12">
+            		<h2>{{time_entry_details.notes}}</h2><br>
+                    <label>ID: </label>{{time_entry_details.time_entry_id}}<br>
+            		<label>Date: </label>{{time_entry_details.date}}<br>
+            		<label>Hours: </label>{{time_entry_details.hours}}<br>
+            		<label>Associated Project ID: </label>{{time_entry_details.project_id}}<br>
+            	</div>
+            </div>
+        </div>
+    </div>
+</div>
